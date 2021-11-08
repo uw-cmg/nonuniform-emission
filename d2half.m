@@ -53,9 +53,9 @@ function [TVJRCTL,result] = d2half(I)
     % TVJRCTL(:,1:2) = S.TVanode;
     % 3, J: 2.5-D calculated current density.
     % 4, R: Richardson-Dushman equation.
-    % 5, S: Space charge: 1-D Child-Langmuir law.
+    % 5, C: Space charge: 1-D Child-Langmuir law.
     % TVJRCTL(:,5) = 4*epsilon0/9*sqrt(2*elec/m)/(zlist(end)^2)*S.TVanode(:,2).^(3/2);
-    % 6, C: 1-D Child-Langmuir law with finite temperature correction.
+    % 6, T: 1-D Child-Langmuir law with finite temperature correction.
     % 7, L: Number of iteration of loopi
 
     newconv_cri1 = min(S.conv_cri(1), Vanode*S.conv_cri(2)); % in V.
